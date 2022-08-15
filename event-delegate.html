@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegate</title>
+</head>
+<body>
+  <h1>Exploring DeleGate</h1>
+  <section>
+    <ul id="ul-list">
+      <li class="list">Lorem, ipsum dolor.</li>
+      <li class="list">Aperiam, inventore laborum!</li>
+      <li class="list">Consequuntur, ipsa repellendus!</li>
+      <li class="list">Fugit, laborum possimus?</li>
+      <li class="list">Perspiciatis, quos odit?</li>
+      <li class="list">Commodi, adipisci ad?</li>
+    </ul>
+  </section>
+  <button id="click-btn">Click-Me</button>
+  <script>
+    // const items = document.getElementsByClassName('list');
+    // for(const item of items){
+    //   item.addEventListener('click', function(event){
+    //     event.target.parentNode.removeChild(event.target);
+    //   })
+    // }
+    document.getElementById('ul-list').addEventListener('click', function(event){
+      event.target.parentNode.removeChild(event.target)
+    })
+    document.getElementById('click-btn').addEventListener('click', function(){
+      const ulList = document.getElementById('ul-list');
+      const getEle = document.createElement('li');
+      getEle.innerText = 'kichu akta hoilo arki';
+      getEle.classList.add('list')
+      ulList.appendChild(getEle);
+    })
+  </script>
+</body>
+</html>

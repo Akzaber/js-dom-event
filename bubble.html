@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Exploring</title>
+</head>
+<body id="body-html">
+  <h1>Exploring Bubble Bubble</h1>
+  <section id="section-click">
+    <ul id="ul-list">
+      <li id="item1">Lorem, ipsum.</li>
+      <li id="item2">Quia, tempore.</li>
+      <li id="item3">Explicabo, excepturi.</li>
+      <li id="item4">Odio, eius!</li>
+      <li id="item5">Beatae, pariatur.</li>
+      <li id="item6">Tempora, expedita!</li>
+    </ul>
+  </section>
+  <script>
+    document.getElementById('item2').addEventListener('click', function(event){
+      console.log('Yes You click item-2');
+      event.stopImmediatePropagation();
+
+    })
+    document.getElementById('item2').addEventListener('click', function(event){
+      console.log('Yes You click item-3');
+      event.stopPropagation();
+
+    })
+    document.getElementById('item2').addEventListener('click', function(event){
+      console.log('Yes You click item-4');
+      event.stopPropagation();
+
+    })
+    document.getElementById('ul-list').addEventListener('click', function(){
+      console.log('Yes You click ul')
+    })
+    document.getElementById('section-click').addEventListener('click', function(){
+      console.log('Yes You click section-click')
+    })
+    document.getElementById('body-html').addEventListener('click', function(){
+      console.log('Yes You click body-html')
+    })
+    
+  </script>
+</body>
+</html>

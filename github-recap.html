@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recap Github</title>
+</head>
+<body>
+  <h1 id="texes">The Text Is Will Be Deleted</h1>
+  <input id="inputs" type="text" placeholder="please type delete">
+  <button id="click-to" disabled>Click</button>
+  <script>
+    document.getElementById('inputs').addEventListener('keyup', function(event){
+      const textWillBe = event.target.value;
+      const disableBtn = document.getElementById('click-to');
+      if(textWillBe === 'delete'){
+        disableBtn.removeAttribute('disabled');
+      }
+      else{
+        disableBtn.setAttribute('disabled', true)
+      }
+    })
+    document.getElementById('click-to').addEventListener('click', function(){
+      const textIs = document.getElementById('texes');
+      textIs.style.display = 'none'
+    })
+  </script>
+</body>
+</html>

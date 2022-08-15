@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delegate Recap</title>
+</head>
+<body>
+  <h1>Exploring Again Delegate</h1>
+  <section>
+    <ul id="ul-section">
+      <li class="item">Lorem, ipsum dolor.</li>
+      <li class="item">Autem, quaerat culpa.</li>
+      <li class="item">Ipsam, vel beatae?</li>
+      <li class="item">Et, commodi ducimus.</li>
+      <li class="item">Totam, doloribus necessitatibus?</li>
+      <li class="item">Corrupti, neque quae.</li>
+    </ul>
+  </section>
+  <button id="click-to">Click-To-Add-Text</button>
+  <script>
+    document.getElementById('ul-section').addEventListener('click', function(event){
+      event.target.parentNode.removeChild(event.target)
+    })
+    document.getElementById('click-to').addEventListener('click', function(){
+      const ulSection = document.getElementById('ul-section');
+      const li = document.createElement('li');
+      li.innerText = 'Dont Worry Nex text Is comming';
+      li.classList.add('item')
+      ulSection.appendChild(li);
+    })
+  </script>
+</body>
+</html>

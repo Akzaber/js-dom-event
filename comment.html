@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMMENT IS HERE</title>
+</head>
+<body>
+  <h1>Please Put you Comment</h1>
+  <div id="comment-container">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quae laborum corrupti a officiis aspernatur? Tenetur dicta suscipit mollitia neque ducimus et labore facilis illum perspiciatis sit accusantium perferendis ratione alias quo eum harum nihil ipsam, voluptatum facere obcaecati veniam, est repudiandae! Debitis, fugiat id consectetur itaque dolore neque asperiores?</p>
+    <p>Nobis quis esse veritatis eaque? Pariatur quod obcaecati temporibus porro impedit, ratione voluptatibus distinctio corporis nemo numquam eos beatae dolorem laborum. Ratione sapiente odit minima dolores ex illum veritatis culpa placeat odio non, perspiciatis, consequatur eaque nisi. Consequuntur placeat velit ipsum labore molestiae id iusto modi! Pariatur omnis reiciendis ullam?</p>
+    <p>Amet vero sit recusandae nemo voluptatem, eum, quas maiores, tenetur delectus molestias necessitatibus doloremque vel provident voluptatum numquam deserunt cumque esse. Totam, fugiat. Quos quidem dolorum aspernatur minima! Quisquam asperiores repudiandae quidem blanditiis corporis perspiciatis fugit quibusdam esse soluta consequuntur nisi ipsam voluptates nihil, sapiente cum rerum accusamus facere consequatur.</p>
+  </div>
+  <div>
+    <textarea name="" id="text-area" cols="60" rows="8"></textarea>
+    <br>
+    <button id="post-btn">Post</button>
+  </div>
+  <script>
+    document.getElementById('post-btn').addEventListener('click', function(){
+      const textArea = document.getElementById('text-area');
+      const getComment = textArea.value;
+      const commentContainer = document.getElementById('comment-container');
+      const p = document.createElement('p')
+      p.innerText = getComment;
+      commentContainer.appendChild(p);
+
+    })
+  </script>
+</body>
+</html>

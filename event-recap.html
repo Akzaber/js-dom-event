@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVENT HANDLER USES</title>
+</head>
+<body>
+  <h1 id="change-me">WE Can USe The Even Handler Which Is Fine</h1>
+  <h2 id="text-change">I Am Changable Text</h2>
+  <p id="p-text">Default text is here</p>
+  <input id="input-text" type="text">
+  <button id="click-update">update</button>
+  <br>
+  <br>
+  <h1 id="name-change">Abul Kashem Zaber</h1>
+  <input id="input-type" type="text">
+  <button id="click-button">Update-Text</button>
+  <br>
+  <br>
+  <button id="click-change" onclick="changeText()">Click Here And Chenge The Text</button>
+  <button id="click-here">Click-To-Change-Text</button>
+
+  <script>
+    function changeText(){
+     const clickOnChange = document.getElementById('text-change');
+     clickOnChange.innerText = 'Yeah Now I am Change My Self Thank You For Click'
+    }
+
+    // option---2
+    document.getElementById('click-here').addEventListener('click', function(){
+      const clickChange = document.getElementById('change-me');
+      clickChange.innerText = 'DOM DOM DOM DOM JAVASCRIPT DOM DOM DOM DOM'
+    })
+
+    // option--2--recap
+    document.getElementById('click-update').addEventListener('click', function(){
+      const inputText = document.getElementById('input-text');
+      const getText = inputText.value;
+      const p = document.getElementById('p-text');
+      p.innerText = getText;
+      inputText.value = '';
+
+    })
+
+    // recap again
+    document.getElementById('click-button').addEventListener('click', function(){
+    const inputType = document.getElementById('input-type');
+    const getValue = inputType.value;
+    const h1 = document.getElementById('name-change');
+    h1.innerText = getValue;
+    inputType.value = '';
+  })
+
+  </script>
+  <script src="js/events.js"></script>
+</body>
+</html>

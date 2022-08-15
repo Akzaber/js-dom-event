@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recap Comment Box</title>
+</head>
+<body>
+  <h1>You Can Comment Here As Much As You Can</h1>
+  <div id="text-div">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perferendis harum voluptatem nihil at inventore porro id suscipit molestias voluptas autem voluptatum ratione quod, repudiandae eum incidunt explicabo, libero pariatur.</p>
+    <p>Excepturi sint itaque a optio perferendis provident, laborum quasi repudiandae odit iste esse fugit vel corporis nemo animi cumque quos magnam voluptate fuga! Deserunt beatae reprehenderit enim alias fugiat saepe.</p>
+    <p>Nisi ab temporibus aspernatur, quasi dolor tenetur ex dignissimos aliquid doloremque recusandae itaque quod nobis dolorem dolorum deserunt corrupti dicta quia. Eveniet reprehenderit deleniti veniam dicta pariatur tenetur sunt rem.</p>
+    <p>Ducimus, exercitationem nulla! Dolores nulla cumque inventore labore, ducimus necessitatibus hic ex recusandae aut explicabo culpa veritatis, esse odit harum autem repudiandae dignissimos! Ipsam dolores culpa, quia doloribus aliquam inventore!</p>
+  </div>
+  <div>
+    <textarea name="" id="text-field" cols="50" rows="4"></textarea>
+    <br>
+    <button id="click-post">Post</button>
+    <script>
+      document.getElementById('click-post').addEventListener('click', function(){
+        const textBox = document.getElementById('text-field');
+        const newComment = textBox.value;
+        const textDiv = document.getElementById('text-div');
+        const newP = document.createElement('p');
+        newP.innerText = newComment;
+        textDiv.appendChild(newP);
+        textBox.value = '';
+      })
+    </script>
+  </div>
+</body>
+</html>
